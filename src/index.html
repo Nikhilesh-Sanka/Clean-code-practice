@@ -9,15 +9,13 @@
     <div id="main">
       <div id="sidebar">
         <div id="search">
-          <input type="text" id="search-bar" />
+          <input type="text" id="search-bar" autocomplete="off" />
         </div>
-        <div id="sidebar-display">
-          <div class="sidebar-product"><p>Product Name</p></div>
-        </div>
+        <div id="sidebar-display"></div>
         <div id="buttons">
           <button id="add-product">Add Product</button>
           <button id="notification">Notifications</button>
-          <div id="notification-marker"></div>
+          <div id="notification-marker" class="hide"></div>
         </div>
       </div>
       <div id="display">
@@ -33,7 +31,7 @@
 
         <!-- product history  -->
         <!-- <h2>Product-Name History</h2>
-              <div id="product-name" class="product-history">
+              <div class="product-history">
                 <div class="product-history-point">
                   <p>Entry</p>
                   <p>19/10/2022</p>
@@ -43,10 +41,10 @@
                     nulla distinctio cupiditate
                   </p>
                 </div>
-                <div id="product-name-buttons" class="product-history-buttons">
-                  <button id="product-name-add-entry-btn">Add Entry</button>
-                  <button id="product-name-add-check-btn">Add Check</button>
-                  <button id="product-name-total-sales-btn">Total Sales</button>
+                <div  class="product-history-buttons">
+                  <button>Add Entry</button>
+                  <button>Add Check</button>
+                  <button>Total Sales</button>
                 </div>
               </div> -->
         <!-- product history -->
@@ -88,10 +86,6 @@
         <!-- Add check Form  -->
 
         <!-- Total sales pop up box -->
-        <!-- <div id="total-sales-pop-up">
-                <p id="total-sales-close-button">X</p>
-                <p>Total sales : 100pcs</p>
-              </div> -->
         <!--Total sales pop up box-->
 
         <!-- Notification display  -->
@@ -103,8 +97,12 @@
         <!-- Notification display -->
       </div>
     </div>
+    <div id="total-sales-pop-up" class="close">
+      <p id="total-sales-close-button">X</p>
+      <p>Total sales : 100pcs</p>
+    </div>
     <!-- Blur functionality -->
-    <!-- <div id="blur"></div> -->
+    <div id="blur" class="close"></div>
     <!-- Blur Functionality -->
   </body>
 </html>
