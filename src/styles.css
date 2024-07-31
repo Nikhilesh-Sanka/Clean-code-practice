@@ -1,0 +1,271 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+button:hover {
+  cursor: pointer;
+}
+body {
+  background-color: #0ea5e9;
+}
+#main {
+  background-color: #84cc16;
+  width: 90%;
+  padding: 10px;
+  margin: 50px auto;
+  height: 600px;
+  display: flex;
+}
+#sidebar {
+  flex: 0 0 200px;
+  margin-right: 10px;
+  background-color: #334155;
+  border-radius: 10px;
+}
+#display {
+  flex: 1 1 auto;
+  background-color: white;
+  border-radius: 10px;
+  overflow: scroll;
+  position: relative;
+}
+#search {
+  height: 10%;
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 10px;
+  padding: 10px;
+  place-items: center;
+}
+#search img {
+  width: 20px;
+}
+#search img:hover {
+  cursor: pointer;
+}
+#sidebar-display {
+  height: 75%;
+  width: 90%;
+  margin: 10px auto;
+  background-color: white;
+  border-radius: 10px;
+  overflow: scroll;
+}
+#sidebar #buttons {
+  height: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#sidebar #buttons button {
+  height: 40px;
+  width: 90px;
+  border-radius: 5px;
+  background-color: #0ea5e9;
+  color: white;
+}
+#notification {
+  position: relative;
+}
+/*Notification Marker Styles*/
+#notification-marker {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: red;
+  left: calc(5% + 10px + 185px);
+  top: 580px;
+}
+/* Notification Marker Styles */
+
+/* styling the products displayed on the side bar*/
+.sidebar-product {
+  width: 90%;
+  margin: 5px auto;
+  background-color: #64748b;
+  color: white;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sidebar-product:hover {
+  cursor: pointer;
+}
+/* styling the products displayed on the side bar*/
+
+/* styling the Add-product Form */
+#display h2 {
+  padding: 10px;
+  text-align: center;
+  margin: 10px;
+}
+#add-product-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  height: 100px;
+}
+#add-product-form > *:nth-child(1),
+#add-product-form > *:nth-child(3) {
+  justify-self: end;
+  margin-right: 10px;
+  align-self: center;
+}
+#add-product-form > *:nth-child(2),
+#add-product-form > *:nth-child(4) {
+  justify-self: start;
+  margin-left: 10px;
+  align-self: center;
+}
+#add-product-form button {
+  width: 70px;
+  height: 30px;
+  color: white;
+}
+#add-product-submit {
+  background-color: #0ea5e9;
+}
+#add-product-close {
+  background-color: red;
+}
+/* styling the Add-product Form */
+
+/*styling the product history page*/
+.product-history-point {
+  height: 90px;
+  width: min(90%, 500px);
+  background-color: #94a3b8;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  gap: 3px;
+  margin: 10px auto;
+  padding: 3px;
+  color: whitesmoke;
+  border-radius: 10px;
+}
+.product-history-point p:first-child {
+  font-size: 1.4rem;
+}
+.product-history-point p:last-child {
+  font-size: 0.7rem;
+  overflow: hidden;
+  height: 100%;
+  padding: 4px;
+}
+.product-history-buttons {
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  position: sticky;
+  background-color: #334155;
+  bottom: 0px;
+  margin-top: 20px;
+}
+.product-history-buttons button {
+  margin: 0 10px;
+  height: 30px;
+  width: 80px;
+  background-color: black;
+  color: white;
+}
+/*styling the product history page*/
+
+/*styling the add Entry Form*/
+.add-entry-check-form {
+  height: 180px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-items: center;
+}
+.add-entry-check-form :nth-child(1),
+.add-entry-check-form :nth-child(3),
+.add-entry-check-form :nth-child(5) {
+  margin-right: 10px;
+  justify-self: end;
+}
+.add-entry-check-form :nth-child(2),
+.add-entry-check-form :nth-child(4),
+.add-entry-check-form :nth-child(6) {
+  margin-left: 10px;
+  justify-self: start;
+}
+.add-entry-check-form button {
+  width: 90px;
+  height: 30px;
+  color: white;
+}
+.add-entry-check-form button:nth-of-type(1) {
+  background-color: #0ea5e9;
+}
+.add-entry-check-form button:last-child {
+  background-color: red;
+}
+/*styling the add Entry Form*/
+
+/*styling total-sales pop up box*/
+#total-sales-pop-up {
+  background-color: gray;
+  color: black;
+  width: 200px;
+  height: 130px;
+  border-radius: 10px;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  z-index: 3;
+}
+#total-sales-pop-up p:first-child {
+  width: max-content;
+  float: right;
+  margin-right: 10px;
+  color: red;
+}
+#total-sales-pop-up p:last-child {
+  height: 100%;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 1.1rem;
+}
+#blur {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #334155;
+  opacity: 0.4;
+  z-index: 2;
+}
+#total-sales-close-button:hover {
+  cursor: pointer;
+}
+/*styling total sales pop up box*/
+
+/*styling the notification display*/
+.notification-point {
+  background-color: #404040;
+  color: white;
+  width: min(80%, 500px);
+  margin: 10px auto;
+  height: 70px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 5px;
+}
+.notification-point p:first-child {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.notification-point:hover {
+  cursor: pointer;
+}
+/*styling the notification display*/
